@@ -1,6 +1,7 @@
 # Terraform `depends_on` issue
 
 Terraform projects that shows issue on how terraform do the plan with the `depends_on` attribute.
+See: [Terraform issue #34391](https://github.com/hashicorp/terraform/issues/34391)
 
 When a module contains a datasource and is declared with a `depends_on`  to a known resource, the datasource will be `unknown` (cannot be determined until apply) which causes errors in a lot of situation.
 
@@ -26,7 +27,7 @@ module "docs" {
 }
 ```
 
-We get the following output **with the `unkown` resource error**:
+We get the following output **with the `unknown` resource error**:
 
 ```
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
