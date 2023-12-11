@@ -18,7 +18,8 @@ the resources that the count depends on.
 
 With the `depends_on`:
 
-```main.terraform
+```terraform
+# main.tf
 module "docs" {
   source          = "./modules/docs"
   depends_on = [ terraform_data.known_data ]
@@ -77,7 +78,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 Without the `depends_on`:
 
-```main.terraform
+```terraform
+# main.tf
 module "docs" {
   source          = "./modules/docs"
 }
